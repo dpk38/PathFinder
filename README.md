@@ -2,11 +2,12 @@
 
 Machine Learning based Evolutionary Algorithmic Path Finder
 
-Used Genetic Algorithms to simulate the Biological Phenomenon of Natural Selection, Mutation, Crossover. 
-A set of rockets from an initial random population learn to find their way to a target over many generations, learning from their previous experiences. The track has multiple obstacles that the rockets have to avoid in order to reach the target. After each generation, rockets with the best fitness are chosen and added to mating pool. 
-Over multiple generations, the rockets eventually "learn" to avoid the obstacles and reach the target. 
-Fitness is calculated as the measure of how close a rocket reached to the target. 
-Mutation is introduced to avoid getting stuck at a local maxima. 
+Implemented Genetic Algorithm to design a path finder system.
+This was expressed in the form of a group of rockets that are navigating through a system of obstacles to reach a target. The target is chosen by the user with a mouse click.
+The rockets initially move in random directions and fail to reach the target. We now implement the Selection process of the Genetic Algorithms to select the best performing individuals by evaluvating their fitness function.
+From the selected rockets, we crossover to create a new population. From them, we choose a few rockets randomly and mutate their vectors. This prevents them from stalling in a local minima.
+The rockets of the new population traverse the course again and the process is repeated.
+Over a couple of generations, the rockets finally reach the target as required.
 Technology Stack: Front End: HTML, CSS Back End: JavaScript
 
 The attached ppt describes the same in detail.
