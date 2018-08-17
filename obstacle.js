@@ -1,5 +1,3 @@
-// Pathfinding w/ Genetic Algorithms
-
 // A class for an obstacle, just a simple rectangle that is drawn
 // and can check if a Rocket touches it
 

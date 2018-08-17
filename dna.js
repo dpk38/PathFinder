@@ -1,5 +1,3 @@
-// Pathfinding w/ Genetic Algorithms
-
 // DNA is an array of vectors
 
 function DNA(newgenes) {
@@ -19,7 +17,6 @@ function DNA(newgenes) {
     }
   }
 
-  // Let's give each Rocket an extra boost of strength for its first frame
   this.genes[0].normalize();
 
   // CROSSOVER

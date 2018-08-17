@@ -1,23 +1,16 @@
-// Each Rocket's DNA is an array of PVectors
-// Each PVector acts as a force for each frame of animation
-// Imagine an booster on the end of the rocket that can povar in any direction
-// and fire at any strength every frame
-
 // The Rocket's fitness is a function of how close it gets to the target as well as how fast it gets there
 
 
 var lifetime;  // How long should each generation live
 
-var population;  // Population
+var population;
 
-var lifecycle;          // Timer for cycle of generation
-var recordtime;         // Fastest time to target
+var lifecycle;
+var recordtime;
 
 var target;        // Target position
 
-//var diam = 24;          // Size of target
-
-var obstacles = [];  //an array list to keep track of all the obstacles!
+var obstacles = [];
 
 function setup() {
   createCanvas(640, 360);
@@ -36,7 +29,6 @@ function setup() {
 
   // Create the obstacle course
   obstacles = [];
-  //obstacles.push(new Obstacle(width/2-100, height/2, 200, 10));
   obstacles.push(new Obstacle(width-400, height-100, 10, 80));
   obstacles.push(new Obstacle(width-250, height-100, 10, 80));
   obstacles.push(new Obstacle(width-380, height-150, 120, 10));
@@ -83,8 +75,6 @@ function draw() {
 
 }
 
-// Move the target if the mouse is pressed
-// System will adapt to new target
 function mousePressed() {
   target.position.x = mouseX;
   target.position.y = mouseY;

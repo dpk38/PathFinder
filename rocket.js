@@ -1,6 +1,3 @@
-// Rocket class -- this is just like our Boid / Particle class
-// the only difference is that it has DNA & fitness
-
 
 //constructor
 function Rocket(pos, dna, totalRockets) {
@@ -15,15 +12,11 @@ function Rocket(pos, dna, totalRockets) {
 
   this.fitness = 0;
   this.geneCounter = 0;
-  this.hitObstacle = false; // Am I stuck on an obstacle?
-  this.hitTarget = false; // Did I reach the target
+  this.hitObstacle = false;
+  this.hitTarget = false;
 
 
   // FITNESS FUNCTION
-  // distance = distance from target
-  // finish = what order did i finish (first, second, etc. . .)
-  // f(distance,finish) =   (1.0f / finish^1.5) * (1.0f / distance^6);
-  // a lower finish is rewarded (exponentially) and/or shorter distance to target (exponetially)
   this.fitness = function() {
     if (this.recordDist < 1) this.recordDist = 1;
 
@@ -45,13 +38,12 @@ function Rocket(pos, dna, totalRockets) {
       // If I hit an edge or an obstacle
       this.obstacles(os);
     }
-    // Draw me!
+    // Draw
     if (!this.hitObstacle) {
       this.display();
     }
   }
 
-  // Did I make it to the target?
   this.checkTarget = function() {
     var d = dist(this.position.x, this.position.y, target.position.x, target.position.y);
     if (d < this.recordDist) this.recordDist = d;
@@ -63,7 +55,6 @@ function Rocket(pos, dna, totalRockets) {
     }
   }
 
-  // Did I hit an obstacle?
   this.obstacles = function(os) {
     for (var i = 0; i < os.length; i++) {
       var obs = os[i];
